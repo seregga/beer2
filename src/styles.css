@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    height: 100%;
+    overflow-y:hidden; 
+}
+.body {
+    height: 100%;
+    background: #161616;
+}
+.container{
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin:0 auto;
+    padding: 5px;
+}
+.personal-account{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    min-height: 30px;
+    font-family: sans-serif;
+    font-size: 20px;
+    background: #272727;
+    border-radius: 7px;
+    margin-bottom:10px;
+    padding: 10px ;
+    border: solid 1px rgb(49, 49, 49);
+    border-top: 3px outset #f7ecd7;
+
+}
+.personal-account__name{
+    color: #f7ecd7;
+    margin-right: 10px;
+}
+.personal-account__avatar{
+    background: #f7ecd7;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    overflow: hidden;
+    object-position:center;
+    object-fit: cover;
+}
+.personal-account__button{
+    text-align: center;
+    color: #f7ecd7;
+    font-weight: 700;
+    padding: 4px 0 0 0;
+    box-sizing: border-box;
+    background: #d16212;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.result{
+    flex: 1 1 auto;
+    text-align: left;
+    height: auto;
+    font-weight: 400;
+    font-family: sans-serif;
+    font-size: 20px;
+    background: #161616;
+    border-radius: 7px;
+    color: orange;
+    margin-bottom:10px;
+    padding: 10px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.result__list{
+    list-style: none;
+}
+.result__title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.result__img{
+    height: 100%;
+    width: 100%;
+    object-position:center;
+    object-fit: cover;
+    border-radius: 7px;
+}
+.result__item{
+    margin-bottom: 10px;
+    padding: 0 0 0 20px;
+}
+.result__name-color{
+    color:chocolate;
+}
+.button-beer-selection{
+    height: 70px;
+    text-align: center;
+    padding: 3px 10px;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 700;
+    margin: 0 0 35px;
+    border-radius: 7px;
+    background: #d16212;
+    color: #161616;
+    border: solid 2px #161616;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.button-beer-selection:active{
+    background-color: #72350a7c;
+}
+@media screen and (max-width: 321px) {
+    .button-beer-selection,.button-beer-selection-none{
+        height: 50px;
+        padding: 3px 10px;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0 0 20px;
+    }
+    .result{
+        font-weight: 300;
+        font-family: sans-serif;
+        font-size: 18px;
+        margin-bottom:10px;
+        padding: 10px;
+    }
+    .result__item{
+        margin-bottom: 8px;
+        padding: 0 0 0 10px;
+    }
+}
+@media screen and (min-width: 800px) {
+    .result{
+        overflow-y: hidden;
+    }
+}
