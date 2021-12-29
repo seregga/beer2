@@ -1,6 +1,7 @@
 import './styles.css'
 import './img/863bdf70fcbc8e9cae9b1711537e73fe3d68fefe_full.jpg'
 import './img/H244484bb65e5472cb6f35b59bedf4240w.jpg_640x640.webp'
+import './img/refresh_arrows.svg'
 
 const buttonBeerSelection = document.querySelector('.button-beer-selection');
 let limiter = false;
@@ -47,13 +48,14 @@ function getRandomUser() {
             personalAccount.innerHTML = `
         <h5 class="personal-account__name">${data.first_name} ${data.last_name}</h5>
         <img class="personal-account__avatar" src="${data.avatar}" alt="кружка пива">
-        <div class="personal-account__button">>></div>
+        <div class="personal-account__button"><img class="personal-account__arrow" src="./src/img/refresh_arrows.svg" alt="refresh">
+        </div>
         `
         })
 }
 
 document.body.addEventListener("click", function (e) {
-    if (e.target && e.target.classList.contains("personal-account__button")) {
+    if (e.target && e.target.classList.contains("personal-account__arrow")) {
         getRandomUser()
     }
 });

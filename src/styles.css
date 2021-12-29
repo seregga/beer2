@@ -48,11 +48,15 @@ html{
     object-fit: cover;
 }
 .personal-account__button{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* text-align: center;
     color: #f7ecd7;
     font-weight: 700;
     padding: 4px 0 0 0;
-    box-sizing: border-box;
+    box-sizing: border-box; */
     background: #d16212;
     height: 30px;
     width: 30px;
